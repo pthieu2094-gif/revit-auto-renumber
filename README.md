@@ -205,7 +205,7 @@ Thêm đoạn sau vào file `.csproj` để enable debugging:
    - Theo thứ tự chọn thủ công (dùng nút Lên/Xuống)
 
 4. **Nút điều khiển:**
-   - **Aplly** Xem kết quả trước khi áp dụng
+   - **Apply** Xem kết quả trước khi áp dụng
    - **OK** Thực hiện đánh số
    - **Cancel** Đóng cửa sổ mà không thay đổi
 
@@ -255,10 +255,6 @@ Kiểm tra file log để xem chi tiết lỗi.
 ## Video Demo
 
 [Xem video demo tại đây](https://drive.google.com/drive/folders/1abXF_7kT3STXQc4WVY_pjG1X6dUgwMwt?usp=sharing)
-
-## License
-
-MIT License - Sử dụng tự do cho mục đích cá nhân và thương mại.
 
 ## Tác giả
 
