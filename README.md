@@ -2,6 +2,14 @@
 
 Plugin Revit 2025 để tự động đánh số Sheet Number cho các bản vẽ (ViewSheet).
 
+## Bối cảnh ra đời
+
+Khi làm việc với các dự án Revit có nhiều bản vẽ (Sheet), việc đánh lại số thứ tự Sheet Number 
+thủ công rất tốn thời gian và dễ sai sót. Đặc biệt khi cần:
+- Chèn thêm bản vẽ mới vào giữa → phải đánh lại toàn bộ số phía sau
+- Thay đổi quy tắc đánh số (prefix, Padding) → phải sửa từng sheet một
+- Kiểm tra trùng lặp Sheet Number → dễ bỏ sót khi làm thủ công
+
 ## Tính năng
 
 - Đánh số lại toàn bộ hoặc một nhóm sheet trong project Revit
@@ -197,9 +205,9 @@ Thêm đoạn sau vào file `.csproj` để enable debugging:
    - Theo thứ tự chọn thủ công (dùng nút Lên/Xuống)
 
 4. **Nút điều khiển:**
-   - **Xem trước:** Xem kết quả trước khi áp dụng
-   - **Áp dụng:** Thực hiện đánh số
-   - **Hủy:** Đóng cửa sổ mà không thay đổi
+   - **Aplly** Xem kết quả trước khi áp dụng
+   - **OK** Thực hiện đánh số
+   - **Cancel** Đóng cửa sổ mà không thay đổi
 
 ### Quy tắc đánh số
 
@@ -250,7 +258,7 @@ MIT License - Sử dụng tự do cho mục đích cá nhân và thương mại.
 
 ## Tác giả
 
-TOOLS API
+PHẠM THANH HIẾU
 
 ## Phiên bản
 
