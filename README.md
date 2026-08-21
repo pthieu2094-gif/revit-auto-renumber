@@ -252,6 +252,10 @@ Kiểm tra:
 
 Kiểm tra file log để xem chi tiết lỗi.
 
+## Video Demo
+
+[Xem video demo tại đây](https://drive.google.com/drive/folders/1abXF_7kT3STXQc4WVY_pjG1X6dUgwMwt?usp=sharing)
+
 ## License
 
 MIT License - Sử dụng tự do cho mục đích cá nhân và thương mại.
