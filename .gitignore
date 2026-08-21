@@ -1,0 +1,39 @@
+## Visual Studio / .NET
+bin/
+obj/
+dist/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+packages/
+*.nupkg
+*.bak
+*.tmp
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+
+## NuGet
+**/packages/*
+!**/packages/build/
+
+## Revit API DLLs (thường nặng, không push lên)
+lib/
+
+## OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+## Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+.idea/

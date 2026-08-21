@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>false</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>SheetNumberingRevit</RootNamespace>
+    <AssemblyName>SheetNumberingRevit</AssemblyName>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon />
+    <StartupObject />
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <REVIT_API_PATH Condition="'$(REVIT_API_PATH)' == ''">$(MSBuildThisFileDirectory)lib\Revit2025\</REVIT_API_PATH>
+    <OutputPath>$(MSBuildThisFileDirectory)dist\Revit2025\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Force VS to always rebuild and overwrite DLL -->
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+
+  <!-- NuGet Packages -->
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <Target Name="CopyAllDependencies" AfterTargets="Build">
+    <ItemGroup>
+      <DependencyFiles Include="$(OutputPath)*.dll" />
+    </ItemGroup>
+  </Target>
+
+  <!-- Ribbon button icons (Resource build action for pack:// URI access) -->
+  <ItemGroup>
+    <Resource Include="Resources\icon32.png" />
+    <Resource Include="Resources\icon16.png" />
+  </ItemGroup>
+
+  <!-- Revit API References from lib/Revit2025/ -->
+  <ItemGroup>
+    <Reference Include="RevitAPI">
+      <HintPath>$(REVIT_API_PATH)RevitAPI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(REVIT_API_PATH)RevitAPIUI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Ensure Revit assemblies are loaded before our code -->
+  <ItemGroup>
+    <None Include="$(REVIT_API_PATH)RevitAPI.dll" Condition="Exists('$(REVIT_API_PATH)RevitAPI.dll')" />
+    <None Include="$(REVIT_API_PATH)RevitAPIUI.dll" Condition="Exists('$(REVIT_API_PATH)RevitAPIUI.dll')" />
+  </ItemGroup>
+
+</Project>

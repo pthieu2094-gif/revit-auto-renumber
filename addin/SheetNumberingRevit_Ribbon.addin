@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <!--
+    Sheet Numbering Revit Add-in for Revit 2025
+
+    Installation:
+    1. Build the project
+    2. Update the Assembly path below to your DLL location
+    3. Copy this file to: %AppData%\Autodesk\Revit\Addins\2025\
+    4. Start Revit 2025
+  -->
+
+  <!-- External Application (Ribbon) -->
+  <AddIn Type="Application">
+    <Assembly>C:\Users\DUAN\Desktop\TOOL API\Renumber Sheets\dist\Revit2025\SheetNumberingRevit.dll</Assembly>
+    <FullClassName>SheetNumberingRevit.App</FullClassName>
+    <Name>Sheet Numbering App</Name>
+    <VendorId>TOOLS API</VendorId>
+    <VendorDescription>TOOLS API - Sheet Numbering Tool</VendorDescription>
+  </AddIn>
+
+</RevitAddIns>

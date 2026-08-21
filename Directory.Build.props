@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Directory.Build.props for SheetNumberingRevit
+
+  Cấu hình centralized properties cho Revit API paths.
+  Copy file này vào thư mục chứa Revit API DLLs hoặc cập nhật REVIT_API_PATH.
+-->
+<Project>
+  <PropertyGroup>
+    <!--
+      Cập nhật đường dẫn này trỏ đến thư mục chứa Revit API DLLs
+      Thông thường: C:\Program Files\Autodesk\Revit 2025\
+    -->
+    <REVIT_API_PATH Condition="'$(REVIT_API_PATH)' == ''">C:\Program Files\Autodesk\Revit 2025\</REVIT_API_PATH>
+
+    <!-- Các thiết lập build -->
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+</Project>
